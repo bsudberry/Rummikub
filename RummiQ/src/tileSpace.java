@@ -1,5 +1,5 @@
 
-public  class tileSpace
+public q class tileSpace
 	{
 		protected String name;
 		protected int value;

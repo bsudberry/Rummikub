@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class tiles
 	{
 		static ArrayList<tileSpace> tile = new ArrayList<tileSpace>();
+		private static ArrayList <tileSpace> playerTiles = new ArrayList<tileSpace>();
 		
 		static void makeBoard()
 			{
@@ -60,12 +61,18 @@ public class tiles
 				tile.add(new tileSpace("Thirteen","Blue",13));
 				tile.add(new tileSpace("Thirteen","Yellow",13));
 				tile.add(new tileSpace("Thirteen","Red",13));
+				
+				Collections.shuffle(tile);
 			}
 		static void dealCards()
 		{
-			for()
+			for (int i = 0; i<15; i++)
 				{
-					
+					playerTiles.add(new Card (" ", " ", 0));
 				}
+		}
+		static void playerTiles()
+		{
+			System.out.println(tiles.tiles.getName().getColor());	
 		}
 	}
