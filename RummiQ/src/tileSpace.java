@@ -1,5 +1,5 @@
 
-public q class tileSpace
+public class tileSpace
 	{
 		protected String name;
 		protected int value;
@@ -11,27 +11,27 @@ public q class tileSpace
 				setValue(v);
 				setColor(c);
 			}
-		private String getName()
+		public String getName()
 			{
 				return name;
 			}
-		private void setName(String name)
+		public void setName(String name)
 			{
 				this.name = name;
 			}
-		private int getValue()
+		public int getValue()
 			{
 				return value;
 			}
-		private void setValue(int value)
+		public void setValue(int value)
 			{
 				this.value = value;
 			}
-		private String getColor()
+		public String getColor()
 			{
 				return color;
 			}
-		private void setColor(String color)
+		public void setColor(String color)
 			{
 				this.color = color;
 			}

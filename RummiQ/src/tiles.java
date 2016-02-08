@@ -1,9 +1,11 @@
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class tiles
 	{
 		static ArrayList<tileSpace> tile = new ArrayList<tileSpace>();
+		static ArrayList<tileSpace> playerTiles = new ArrayList<tileSpace>();
 		
 		static void makeBoard()
 			{
@@ -60,5 +62,15 @@ public class tiles
 				tile.add(new tileSpace("Thirteen","Blue",13));
 				tile.add(new tileSpace("Thirteen","Yellow",13));
 				tile.add(new tileSpace("Thirteen","Red",13));
+				Collections.shuffle(tile);
 			}
+		public static void dealCards()
+		{
+			for(int i =0; i<15;i++)
+			{
+				playerTiles.add(tile.get(i));
+				System.out.println(playerTiles.get(i).getName());
+			}
+			
+		}
 	}
