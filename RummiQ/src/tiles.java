@@ -110,6 +110,7 @@ public class tiles
 		public static void playerMove()
 		{
 				{
+					int userChoice=-1;
 					System.out.println(" ");
 					System.out.println("What would you like to do?");
 					System.out.println("1.) Place a run.");
@@ -124,15 +125,15 @@ public class tiles
 							System.out.println("What tiles would you like to put down?");
 						 for(int i =0; i<totalTiles; i++)
 							 {
-								 int userChoice = userInput.nextInt();
+								 userChoice = userInput.nextInt();
 								 runArray.add(tile.get(userChoice-1));
 							 }
 						 for(int i = 0; i < totalTiles; i++)
 					         {
 					        	 System.out.println(runArray.get(i).getName()+ " " + runArray.get(i).getColor());
 					         }
-//						 tile.remove(userChoice);
-//						 dealCards();
+						 tile.remove(userChoice);
+						 dealCards();
 						}
 					if(choice == 2)
 						{
