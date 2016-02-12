@@ -4,7 +4,7 @@ public class tileSpace
 		protected String name;
 		protected int value;
 		protected String color;
-		
+		protected int cardNumber;
 		public tileSpace(String n,String c, int v)
 			{
 				setName(n);
@@ -35,4 +35,5 @@ public class tileSpace
 			{
 				this.color = color;
 			}
+		
 	}

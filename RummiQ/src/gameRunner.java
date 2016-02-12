@@ -7,6 +7,8 @@ public class gameRunner
 				tiles e = new tiles();
 				e.makeBoard();
 				tiles.dealCards();
+				tiles.buildBoard();
+				tiles.playerMove();
 			}
 
 	}
