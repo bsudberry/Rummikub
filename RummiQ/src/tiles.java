@@ -9,10 +9,13 @@ public class tiles
 		static ArrayList<tileSpace> tile = new ArrayList<tileSpace>();
 		static ArrayList<tileSpace> playerTiles = new ArrayList<tileSpace>();
 		static ArrayList<tileSpace> runArray = new ArrayList<tileSpace>();
+		static ArrayList<tileSpace> straightArray = new ArrayList<tileSpace>();
+		static ArrayList<tileSpace> pulledTiles = new ArrayList<tileSpace>();
 		static String straight;
 		static String straight2;
 		static String run;
 		static String run2;
+		static int totalTiles;
 		
 		static void makeBoard()
 			{
@@ -78,7 +81,7 @@ public class tiles
 			{
 				int counter = i+1;
 				playerTiles.add(tile.get(i));
-				System.out.println(counter + ") " + playerTiles.get(i).getName() +" " +playerTiles.get(i).getColor());
+				System.out.println(counter + ") " + playerTiles.get(i).getName() +" " +playerTiles.get(i).getColor()+" "+playerTiles.get(i).getValue());
 				System.out.println("--------------------|");
 			}
 			System.out.println(" ");
@@ -118,10 +121,10 @@ public class tiles
 					System.out.println("3.) Pull a tile.");
 					System.out.println("4.) Add to the current board");
 					int choice = userInput.nextInt();
-					System.out.println("How many tiles would you like to put down?");
-					int totalTiles = userInput.nextInt();
 					if(choice == 1)
 						{
+							System.out.println("How many tiles would you like to put down?");
+							 totalTiles = userInput.nextInt();
 							System.out.println("What tiles would you like to put down?");
 						 for(int i =0; i<totalTiles; i++)
 							 {
@@ -131,22 +134,50 @@ public class tiles
 						 for(int i = 0; i < totalTiles; i++)
 					         {
 					        	 System.out.println(runArray.get(i).getName()+ " " + runArray.get(i).getColor());
-					         }
-						 tile.remove(userChoice);
+					        	 tile.remove(i);					        	
+							 }
 						 dealCards();
+						 
 						}
 					if(choice == 2)
 						{
-							
+							System.out.println("How many tiles would you like to put down?");
+							int totalTiles = userInput.nextInt();
+							System.out.println("What tiles would you like to put down?");
+						 for(int i =0; i<totalTiles; i++)
+							 {
+								 userChoice = userInput.nextInt();
+								 straightArray.add(tile.get(userChoice-1));
+							 }
+						 for(int i = 0; i < totalTiles; i++)
+					         {
+					        	 System.out.println(straightArray.get(i).getName()+ " " + straightArray.get(i).getColor());
+					        	 tile.remove(userChoice-1);					        	
+							 }
+						 dealCards();
 						}
 					if(choice == 3)
 						{
-							
+						 
 						}
 					if(choice == 4)
 						{
 							
 						}
 				}
+		}
+		public static void checkRun()
+		{
+			boolean isRun;
+			
+			 for(int i = 0; i < totalTiles; i++)
+		         {
+		        
+		  				        	
+				 }
+		}
+		public static void checkStraight()
+		{
+			
 		}
 	}
