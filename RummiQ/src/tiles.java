@@ -136,6 +136,7 @@ public class tiles
 					        	 System.out.println(runArray.get(i).getName()+ " " + runArray.get(i).getColor());
 					        	 tile.remove(i);					        	
 							 }
+						 checkRun();
 						 dealCards();
 						 
 						}
@@ -154,6 +155,7 @@ public class tiles
 					        	 System.out.println(straightArray.get(i).getName()+ " " + straightArray.get(i).getColor());
 					        	 tile.remove(userChoice-1);					        	
 							 }
+						 checkStraight();
 						 dealCards();
 						}
 					if(choice == 3)
@@ -168,16 +170,41 @@ public class tiles
 		}
 		public static void checkRun()
 		{
-			boolean isRun;
+			boolean isRun=false;
+			int tempInt = runArray.get(0).getValue();
 			
-			 for(int i = 0; i < totalTiles; i++)
+			 for(int i = 0; i < runArray.size(); i++)
 		         {
-		        
+		        	 if (runArray.get(i).getValue() == tempInt+(i))
+		        		 {
+		        			 
+		        		 }
+		        		 else 
+		        			 {
+		        				System.out.println("Sorry that is not a run");
+		        				playerMove();
+		        			 }
 		  				        	
 				 }
+			 System.out.println("Nice Run!!");
 		}
 		public static void checkStraight()
 		{
+			String tempString = straightArray.get(0).getColor();
 			
+			 for(int i = 0; i < straightArray.size(); i++)
+		         {
+		        	 if (straightArray.get(i).getColor().equals(tempString))
+		        		 {
+		        			 
+		        		 }
+		        		 else 
+		        			 {
+		        				System.out.println("Sorry that is not a straight");
+		        				playerMove();
+		        			 }
+		  				        	
+				 }
+			 System.out.println("Nice Straight!!");
 		}
 	}
